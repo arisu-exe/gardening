@@ -1,0 +1,12 @@
+{
+  "block.gardening.soil" : "Soil",
+
+
+
+  "item.gardening.wooden_trowel" : "Wooden Trowel",
+  "item.gardening.stone_trowel" : "Stone Trowel",
+  "item.gardening.golden_trowel" : "Golden Trowel",
+  "item.gardening.iron_trowel" : "Iron Trowel",
+  "item.gardening.diamond_trowel" : "Diamond Trowel",
+  "item.gardening.netherite_trowel" : "Netherite Trowel"
+}
