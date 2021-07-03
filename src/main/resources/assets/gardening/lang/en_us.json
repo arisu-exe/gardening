@@ -1,4 +1,8 @@
 {
+  "itemGroup.gardening" : "Gardening",
+
+
+
   "block.gardening.soil" : "Soil",
 
 
@@ -8,5 +12,8 @@
   "item.gardening.golden_trowel" : "Golden Trowel",
   "item.gardening.iron_trowel" : "Iron Trowel",
   "item.gardening.diamond_trowel" : "Diamond Trowel",
-  "item.gardening.netherite_trowel" : "Netherite Trowel"
+  "item.gardening.netherite_trowel" : "Netherite Trowel",
+
+  "item.gardening.marigold_seeds" : "Marigold Seeds",
+  "item.gardening.evening_primrose_seeds" : "Evening Primrose Seeds"
 }

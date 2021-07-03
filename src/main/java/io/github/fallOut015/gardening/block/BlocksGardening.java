@@ -14,7 +14,7 @@ public class BlocksGardening {
 
 
 
-    public static final RegistryObject<Block> SOIL = BLOCKS.register("soil", () -> new SoilBlock(AbstractBlock.Properties.of(Material.DIRT)));
+    public static final RegistryObject<Block> SOIL = BLOCKS.register("soil", () -> new SoilBlock(AbstractBlock.Properties.of(Material.DIRT).noOcclusion()));
 
 
 

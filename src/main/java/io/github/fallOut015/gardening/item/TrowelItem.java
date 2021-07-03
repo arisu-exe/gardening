@@ -32,7 +32,7 @@ public class TrowelItem extends ToolItem {
 
             level.setBlock(pos, BlocksGardening.SOIL.get().defaultBlockState(), 2);
 
-            return ActionResultType.CONSUME;
+            return ActionResultType.SUCCESS;
         }
         return ActionResultType.FAIL;
     }
