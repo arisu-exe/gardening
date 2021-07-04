@@ -3,6 +3,25 @@
 
 
 
+  "color.white" : "White",
+  "color.orange" : "Orange",
+  "color.magenta" : "Magenta",
+  "color.light_blue" : "Light Blue",
+  "color.yellow" : "Yellow",
+  "color.lime" : "Lime",
+  "color.pink" : "Pink",
+  "color.gray" : "Gray",
+  "color.light_gray" : "Light Gray",
+  "color.cyan" : "Cyan",
+  "color.purple" : "Purple",
+  "color.blue" : "Blue",
+  "color.brown" : "Brown",
+  "color.green" : "Green",
+  "color.red" : "Red",
+  "color.black" : "Black",
+
+
+
   "block.gardening.soil" : "Soil",
 
 

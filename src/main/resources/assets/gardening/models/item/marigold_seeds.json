@@ -1,6 +1,16 @@
 {
-  "parent" : "minecraft:item/generated",
-  "textures" : {
-    "layer0" : "gardening:item/marigold_seeds"
-  }
+  "overrides" : [
+    {
+      "predicate" : {
+        "gardening:color_id" : 1
+      },
+      "model" : "gardening:item/marigold_seeds_orange"
+    },
+    {
+      "predicate" : {
+        "gardening:color_id" : 4
+      },
+      "model" : "gardening:item/marigold_seeds_yellow"
+    }
+  ]
 }

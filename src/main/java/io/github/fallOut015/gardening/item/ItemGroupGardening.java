@@ -1,5 +1,6 @@
 package io.github.fallOut015.gardening.item;
 
+import net.minecraft.item.DyeColor;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
@@ -10,7 +11,9 @@ public class ItemGroupGardening {
         @Override
         @OnlyIn(Dist.CLIENT)
         public ItemStack makeIcon() {
-            return new ItemStack(ItemsGardening.MARIGOLD_SEEDS.get());
+            ItemStack itemStack = new ItemStack(ItemsGardening.MARIGOLD_SEEDS.get());
+            SeedsItem.setColor(itemStack, DyeColor.YELLOW);
+            return itemStack;
         }
     };
 }

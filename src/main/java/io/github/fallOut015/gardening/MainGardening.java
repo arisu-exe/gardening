@@ -1,6 +1,7 @@
 package io.github.fallOut015.gardening;
 
 import io.github.fallOut015.gardening.block.BlocksGardening;
+import io.github.fallOut015.gardening.item.ItemModelPropertiesGardening;
 import io.github.fallOut015.gardening.item.ItemsGardening;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -40,6 +41,7 @@ public class MainGardening {
     private void setup(final FMLCommonSetupEvent event) {
     }
     private void doClientStuff(final FMLClientSetupEvent event) {
+        ItemModelPropertiesGardening.doClientStuff(event);
     }
     private void enqueueIMC(final InterModEnqueueEvent event) {
     }

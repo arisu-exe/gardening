@@ -1,11 +1,9 @@
 package io.github.fallOut015.gardening.item;
 
+import com.google.common.collect.Lists;
 import io.github.fallOut015.gardening.MainGardening;
 import io.github.fallOut015.gardening.block.BlocksGardening;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemTier;
+import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,8 +23,8 @@ public class ItemsGardening {
     public static final RegistryObject<Item> DIAMOND_TROWEL = ITEMS.register("diamond_trowel", () -> new TrowelItem(ItemTier.DIAMOND, -3, 0F, new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
     public static final RegistryObject<Item> NETHERITE_TROWEL = ITEMS.register("netherite_trowel", () -> new TrowelItem(ItemTier.NETHERITE, -4, 0F, new Item.Properties().tab(ItemGroup.TAB_TOOLS)));
 
-    public static final RegistryObject<Item> MARIGOLD_SEEDS = ITEMS.register("marigold_seeds", () -> new SeedsItem(new Item.Properties().tab(ItemGroupGardening.TAB_GARDENING)));
-    public static final RegistryObject<Item> EVENING_PRIMROSE_SEEDS = ITEMS.register("evening_primrose_seeds", () -> new SeedsItem(new Item.Properties().tab(ItemGroupGardening.TAB_GARDENING)));
+    public static final RegistryObject<Item> MARIGOLD_SEEDS = ITEMS.register("marigold_seeds", () -> new SeedsItem(Lists.newArrayList(DyeColor.ORANGE, DyeColor.YELLOW), new Item.Properties().tab(ItemGroupGardening.TAB_GARDENING)));
+    public static final RegistryObject<Item> EVENING_PRIMROSE_SEEDS = ITEMS.register("evening_primrose_seeds", () -> new SeedsItem(Lists.newArrayList(DyeColor.PINK, DyeColor.WHITE, DyeColor.YELLOW), new Item.Properties().tab(ItemGroupGardening.TAB_GARDENING)));
 
 
 
