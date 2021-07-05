@@ -1,9 +1,12 @@
 package io.github.fallOut015.gardening.block;
 
 import com.mojang.datafixers.util.Pair;
+import io.github.fallOut015.gardening.item.FlowerItem;
 import net.minecraft.item.DyeColor;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.World;
 
 import java.util.Map;
 import java.util.Optional;
@@ -38,15 +41,14 @@ public class FlowerInstance {
     public boolean hasFlower() {
         return this.flowerInfo.isPresent();
     }
-    public void tick() {
+    public void tick(World level) {
         if(this.age < 5) {
-            this.ageUp += new Random().nextFloat() * 0.001f;
+            this.ageUp += new Random().nextFloat() * (level.isRaining() ? 0.002f : 0.001f);
             if(this.ageUp >= 1.0f) {
                 this.ageUp = 0;
                 ++ this.age;
                 if(this.age == 5) {
-                    this.age = 0;
-                    this.flowerInfo = Optional.empty();
+                    this.remove();
                 }
             }
         }
@@ -54,8 +56,29 @@ public class FlowerInstance {
     public void setFlowerType(FlowerType flowerType, DyeColor color) {
         this.flowerInfo = Optional.of(Pair.of(flowerType, color));
         this.age = 0;
+        this.ageUp = 0;
     }
     public ResourceLocation getTextureForAge() {
         return this.flowerInfo.get().getFirst().getTextureForAgeAndColor(this.age, this.flowerInfo.get().getSecond());
+    }
+    public boolean canEnhance() {
+        return this.age < 4;
+    }
+    public void enhance() {
+        ++ this.age;
+        this.ageUp = 0;
+    }
+    public boolean pickable() {
+        return this.age >= 3;
+    }
+    public void remove() {
+        this.age = 0;
+        this.ageUp = 0;
+        this.flowerInfo = Optional.empty();
+    }
+    public ItemStack getAsItemStack() {
+        ItemStack itemStack = new ItemStack(this.flowerInfo.get().getFirst().getFlowerItem());
+        FlowerItem.setColor(itemStack, this.flowerInfo.get().getSecond());
+        return itemStack;
     }
 }

@@ -38,6 +38,10 @@ public class ItemsGardening {
     public static final RegistryObject<Item> EVENING_PRIMROSE_SEEDS = ITEMS.register("evening_primrose_seeds", () -> new SeedsItem(FlowerTypes.EVENING_PRIMROSE, new Item.Properties().tab(ItemGroupGardening.TAB_GARDENING)));
     public static final RegistryObject<Item> FORGET_ME_NOT_SEEDS = ITEMS.register("forget_me_not_seeds", () -> new SeedsItem(FlowerTypes.FORGET_ME_NOT, new Item.Properties().tab(ItemGroupGardening.TAB_GARDENING)));
 
+    public static final RegistryObject<Item> MARIGOLD = ITEMS.register("marigold", () -> new FlowerItem(BlocksGardening.MARIGOLD.get(), new Item.Properties().tab(ItemGroupGardening.TAB_GARDENING)));
+    public static final RegistryObject<Item> EVENING_PRIMROSE = ITEMS.register("evening_primrose", () -> new FlowerItem(BlocksGardening.EVENING_PRIMROSE.get(), new Item.Properties().tab(ItemGroupGardening.TAB_GARDENING)));
+    public static final RegistryObject<Item> FORGET_ME_NOT = ITEMS.register("forget_me_not", () -> new FlowerItem(BlocksGardening.FORGET_ME_NOT.get(), new Item.Properties().tab(ItemGroupGardening.TAB_GARDENING)));
+
 
 
     public static void register(IEventBus bus) {

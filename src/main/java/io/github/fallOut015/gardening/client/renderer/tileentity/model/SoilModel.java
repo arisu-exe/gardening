@@ -9,7 +9,6 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.model.Model;
 import net.minecraft.client.renderer.model.ModelRenderer;
-import net.minecraftforge.fml.common.Mod;
 
 public class SoilModel extends Model {
 	private final ModelRenderer bb_main;

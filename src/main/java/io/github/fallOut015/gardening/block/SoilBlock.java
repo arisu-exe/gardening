@@ -9,6 +9,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
@@ -35,19 +36,32 @@ public class SoilBlock extends Block {
     public ActionResultType use(BlockState state, World level, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult result) {
         SoilTileEntity soilTileEntity = (SoilTileEntity) level.getBlockEntity(pos);
         Vector3d l = result.getLocation();
-        double xoff = l.x() - (double) pos.getX() >= 0.5d ? 0.5d : 0;
-        double zoff = l.z() - (double) pos.getZ() >= 0.5d ? 0.5d : 0;
-
-        int i = (int) Math.round(zoff * 4d + xoff * 2d);
+        int x = l.x() - (double) pos.getX() >= 0.5d ? 1 : 0;
+        int z = l.z() - (double) pos.getZ() >= 0.5d ? 0 : 1;
+        int i = 2 * z + x;
 
         ItemStack itemStack = player.getItemInHand(hand);
 
-        if(!soilTileEntity.getFlowerAt(i).hasFlower() && PLANTABLE.test(itemStack)) {
-            soilTileEntity.placeFlowerAt(((SeedsItem) itemStack.getItem()).getFlowerType(), SeedsItem.getColor(itemStack), i);
-            itemStack.shrink(1);
+        if(soilTileEntity.getFlowerAt(i).hasFlower()) {
+            if(itemStack.getItem() == Items.SHEARS) {
+                soilTileEntity.removeFlowerAt(i);
+            } else if(itemStack.isEmpty() && soilTileEntity.getFlowerAt(i).pickable()) {
+                FlowerInstance flower = soilTileEntity.removeFlowerAt(i);
+                ItemStack flowerItem = flower.getAsItemStack();
+                player.setItemInHand(hand, flowerItem);
+                return ActionResultType.SUCCESS;
+            }
+        } else {
+            if(PLANTABLE.test(itemStack)) {
+                soilTileEntity.placeFlowerAt(((SeedsItem) itemStack.getItem()).getFlowerType(), SeedsItem.getColor(itemStack), i);
+                if(!player.isCreative()) {
+                    itemStack.shrink(1);
+                }
 
-            return ActionResultType.SUCCESS;
+                return ActionResultType.SUCCESS;
+            }
         }
+
         return ActionResultType.FAIL;
     }
     @Override

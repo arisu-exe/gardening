@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class ItemModelPropertiesGardening {
     public static void doClientStuff(final FMLClientSetupEvent event) {
-        for(Item item : ForgeRegistries.ITEMS.getValues().stream().filter(item -> item instanceof SeedsItem).collect(Collectors.toList())) {
+        for(Item item : ForgeRegistries.ITEMS.getValues().stream().filter(item -> item instanceof SeedsItem || item instanceof FlowerItem).collect(Collectors.toList())) {
             ItemModelsProperties.register(item, new ResourceLocation(MainGardening.MODID, "color_id"), (stack, world, entity) -> SeedsItem.getColor(stack).getId());
         }
     }
