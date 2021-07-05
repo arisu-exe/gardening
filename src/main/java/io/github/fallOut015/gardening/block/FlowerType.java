@@ -19,11 +19,11 @@ public class FlowerType {
         this.textures = Maps.newHashMap();
         for(final DyeColor color : colors) {
             ResourceLocation[] resourceLocations = new ResourceLocation[] {
-                new ResourceLocation(MainGardening.MODID, "textures/block/" + id + "_" + color.getName() + "_0"),
-                new ResourceLocation(MainGardening.MODID, "textures/block/" + id + "_" + color.getName() + "_1"),
-                new ResourceLocation(MainGardening.MODID, "textures/block/" + id + "_" + color.getName() + "_2"),
-                new ResourceLocation(MainGardening.MODID, "textures/block/" + id + "_" + color.getName() + "_3"),
-                new ResourceLocation(MainGardening.MODID, "textures/block/" + id + "_" + color.getName() + "_4")
+                new ResourceLocation(MainGardening.MODID, "textures/block/" + id + "_" + color.getName() + "_0" + ".png"),
+                new ResourceLocation(MainGardening.MODID, "textures/block/" + id + "_" + color.getName() + "_1" + ".png"),
+                new ResourceLocation(MainGardening.MODID, "textures/block/" + id + "_" + color.getName() + "_2" + ".png"),
+                new ResourceLocation(MainGardening.MODID, "textures/block/" + id + "_" + color.getName() + "_3" + ".png"),
+                new ResourceLocation(MainGardening.MODID, "textures/block/" + id + "_" + color.getName() + "_4" + ".png")
             };
             this.textures.put(color, resourceLocations);
         }
