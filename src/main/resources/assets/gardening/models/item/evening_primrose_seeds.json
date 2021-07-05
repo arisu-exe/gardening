@@ -1,6 +1,22 @@
 {
-  "parent" : "minecraft:item/generated",
-  "textures" : {
-    "layer0" : "gardening:item/evening_primrose_seeds"
-  }
+  "overrides" : [
+    {
+      "predicate" : {
+        "gardening:color_id" : 0
+      },
+      "model" : "gardening:item/evening_primrose_seeds_white"
+    },
+    {
+      "predicate" : {
+        "gardening:color_id" : 2
+      },
+      "model" : "gardening:item/evening_primrose_seeds_magenta"
+    },
+    {
+      "predicate" : {
+        "gardening:color_id" : 4
+      },
+      "model" : "gardening:item/evening_primrose_seeds_yellow"
+    }
+  ]
 }

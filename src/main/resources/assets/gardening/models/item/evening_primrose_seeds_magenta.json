@@ -1,0 +1,6 @@
+{
+  "parent" : "minecraft:item/generated",
+  "textures" : {
+    "layer0" : "gardening:item/evening_primrose_seeds_magenta"
+  }
+}

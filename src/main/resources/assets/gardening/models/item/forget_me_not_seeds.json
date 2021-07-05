@@ -1,0 +1,28 @@
+{
+  "overrides" : [
+    {
+      "predicate" : {
+        "gardening:color_id" : 0
+      },
+      "model" : "gardening:item/forget_me_not_seeds_white"
+    },
+    {
+      "predicate" : {
+        "gardening:color_id" : 3
+      },
+      "model" : "gardening:item/forget_me_not_seeds_light_blue"
+    },
+    {
+      "predicate" : {
+        "gardening:color_id" : 6
+      },
+      "model" : "gardening:item/forget_me_not_seeds_pink"
+    },
+    {
+      "predicate" : {
+        "gardening:color_id" : 10
+      },
+      "model" : "gardening:item/forget_me_not_seeds_purple"
+    }
+  ]
+}
