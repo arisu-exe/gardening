@@ -15,7 +15,7 @@ public class FlowerBlockGardening extends FlowerBlock {
     public FlowerBlockGardening(final FlowerType flowerType, Effect effect, int duration, Properties properties) {
         super(effect, duration, properties);
         this.flowerType = flowerType;
-        this.registerDefaultState(this.stateDefinition.any().setValue(COLOR, DyeColor.WHITE));
+        this.registerDefaultState(this.stateDefinition.any().setValue(COLOR, flowerType.getColors().get(0)));
     }
 
     public final FlowerType getFlowerType() {

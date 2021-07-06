@@ -40,7 +40,7 @@ import java.util.stream.Collectors;
 public class MainGardening {
     public static final String MODID = "gardening";
     private static final Logger LOGGER = LogManager.getLogger();
-    private static final VoxelShape SELECTION = VoxelShapes.box(0, 0, 0, 0.5, 0.5 + (1d / 16d), 0.5);
+    private static final VoxelShape SELECTION = VoxelShapes.box(0, 0, 0, 0.5d, 1d / 16d, 0.5d);
 
     public MainGardening() {
         BlocksGardening.register(FMLJavaModLoadingContext.get().getModEventBus());
