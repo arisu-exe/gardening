@@ -1,0 +1,16 @@
+{
+  "overrides" : [
+    {
+      "predicate" : {
+        "gardening:color_id" : 1
+      },
+      "model" : "gardening:item/marigold_orange"
+    },
+    {
+      "predicate" : {
+        "gardening:color_id" : 4
+      },
+      "model" : "gardening:item/marigold_yellow"
+    }
+  ]
+}

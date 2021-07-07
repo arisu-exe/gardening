@@ -31,10 +31,8 @@ public class SoilTileEntity extends TileEntity implements ITickableTileEntity {
     public FlowerInstance getFlowerAt(int i) { // 0 is top-left, 1 is top-right, 2 is bottom-left, 3 is bottom-right
         return this.flowers[i];
     }
-    public FlowerInstance removeFlowerAt(int i) {
-        FlowerInstance flower = this.getFlowerAt(i);
+    public void removeFlowerAt(int i) {
         this.flowers[i].remove();
-        return flower;
     }
     public void placeFlowerAt(FlowerType flowerType, DyeColor color, int i) {
         this.flowers[i].setFlowerType(flowerType, color);

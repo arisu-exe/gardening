@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "gardening:block/evening_primrose_magenta"
+  }
+}

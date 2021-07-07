@@ -1,0 +1,16 @@
+{
+  "variants" : {
+    "color=white" : {
+      "model" : "gardening:block/potted_forget_me_not_white"
+    },
+    "color=light_blue" : {
+      "model" : "gardening:block/potted_forget_me_not_light_blue"
+    },
+    "color=pink" : {
+      "model" : "gardening:block/potted_forget_me_not_pink"
+    },
+    "color=purple" : {
+      "model" : "gardening:block/potted_forget_me_not_purple"
+    }
+  }
+}

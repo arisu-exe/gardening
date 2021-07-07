@@ -24,6 +24,15 @@
 
   "block.gardening.soil" : "Soil",
 
+  "block.gardening.marigold" : "Marigold",
+  "block.gardening.evening_primrose" : "Evening Primrose",
+  "block.gardening.forget_me_not" : "Forget-Me-Not",
+
+  "block.gardening.potted_marigold" : "Potted Marigold",
+  "block.gardening.potted_evening_primrose" : "Potted Evening Primrose",
+  "block.gardening.potted_forget_me_not" : "Potted Forget-Me-Not",
+
+
 
 
   "item.gardening.watering_can" : "Watering Can",

@@ -46,14 +46,20 @@ public class SoilBlock extends Block {
             if(itemStack.getItem() == Items.SHEARS) {
                 soilTileEntity.removeFlowerAt(i);
             } else if(itemStack.isEmpty() && soilTileEntity.getFlowerAt(i).pickable()) {
-                FlowerInstance flower = soilTileEntity.removeFlowerAt(i);
+                FlowerInstance flower = soilTileEntity.getFlowerAt(i);
                 ItemStack flowerItem = flower.getAsItemStack();
+                soilTileEntity.removeFlowerAt(i);
                 player.setItemInHand(hand, flowerItem);
                 return ActionResultType.SUCCESS;
             }
         } else {
             if(PLANTABLE.test(itemStack)) {
-                soilTileEntity.placeFlowerAt(((SeedsItem) itemStack.getItem()).getFlowerType(), SeedsItem.getColor(itemStack), i);
+                if(itemStack.getItem() instanceof SeedsItem) {
+                    soilTileEntity.placeFlowerAt(((SeedsItem) itemStack.getItem()).getFlowerType(), SeedsItem.getColor(itemStack), i);
+                } else {
+                    // TODO planting flower code
+                }
+
                 if(!player.isCreative()) {
                     itemStack.shrink(1);
                 }

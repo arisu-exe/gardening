@@ -3,6 +3,7 @@ package io.github.fallOut015.gardening;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import io.github.fallOut015.gardening.block.BlocksGardening;
 import io.github.fallOut015.gardening.client.registry.ClientRegistryGardening;
+import io.github.fallOut015.gardening.client.renderer.RenderTypeLookupGardening;
 import io.github.fallOut015.gardening.item.ItemModelPropertiesGardening;
 import io.github.fallOut015.gardening.item.ItemsGardening;
 import io.github.fallOut015.gardening.tileentity.TileEntitiesGardening;
@@ -60,6 +61,7 @@ public class MainGardening {
     private void doClientStuff(final FMLClientSetupEvent event) {
         ItemModelPropertiesGardening.doClientStuff(event);
         ClientRegistryGardening.doClientStuff(event);
+        RenderTypeLookupGardening.doClientStuff(event);
     }
     private void enqueueIMC(final InterModEnqueueEvent event) {
     }

@@ -1,0 +1,10 @@
+{
+  "variants" : {
+    "color=orange" : {
+      "model" : "gardening:block/potted_marigold_orange"
+    },
+    "color=yellow" : {
+      "model" : "gardening:block/potted_marigold_yellow"
+    }
+  }
+}

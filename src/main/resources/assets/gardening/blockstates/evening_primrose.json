@@ -1,0 +1,13 @@
+{
+  "variants" : {
+    "color=white" : {
+      "model" : "gardening:block/evening_primrose_white"
+    },
+    "color=magenta" : {
+      "model" : "gardening:block/evening_primrose_magenta"
+    },
+    "color=yellow" : {
+      "model" : "gardening:block/evening_primrose_yellow"
+    }
+  }
+}

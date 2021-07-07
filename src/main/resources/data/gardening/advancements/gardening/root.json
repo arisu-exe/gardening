@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "item": "gardening:forget_me_not",
+      "nbt" : "{color_id:0}"
+    },
+    "title": {
+      "translate": "advancements.gardening.root.title"
+    },
+    "description": {
+      "translate": "advancements.gardening.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/story.png"
+  },
+  "criteria": {
+    "get_trowel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "gardening:wooden_trowel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_trowel"
+    ]
+  ]
+}

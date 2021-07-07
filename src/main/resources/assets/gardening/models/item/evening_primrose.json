@@ -1,0 +1,22 @@
+{
+  "overrides" : [
+    {
+      "predicate" : {
+        "gardening:color_id" : 0
+      },
+      "model" : "gardening:item/evening_primrose_white"
+    },
+    {
+      "predicate" : {
+        "gardening:color_id" : 2
+      },
+      "model" : "gardening:item/evening_primrose_magenta"
+    },
+    {
+      "predicate" : {
+        "gardening:color_id" : 4
+      },
+      "model" : "gardening:item/evening_primrose_yellow"
+    }
+  ]
+}
