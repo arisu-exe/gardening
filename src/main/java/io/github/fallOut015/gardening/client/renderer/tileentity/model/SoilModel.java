@@ -16,7 +16,7 @@ public class SoilModel extends Model {
 	private final ModelRenderer[] modelsTRBL;
 
 	public SoilModel() {
-		super(RenderType::entityCutout);
+		super(RenderType::entityCutoutNoCull);
 
 		this.modelsTLBR = new ModelRenderer[4];
 		this.modelsTRBL = new ModelRenderer[4];

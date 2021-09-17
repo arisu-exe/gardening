@@ -24,7 +24,7 @@ public class SoilRenderer extends TileEntityRenderer<SoilTileEntity> {
         for(int i = 0; i < soilTileEntity.numSlots(); ++ i) {
             FlowerInstance flower = soilTileEntity.getFlowerAt(i);
             if(flower.hasFlower()) {
-                this.model.renderFlower(i, stack, renderTypeBuffer.getBuffer(RenderType.entityCutout(flower.getTextureForAge())), light, overlay, 1.0f, 1.0f, 1.0f, 1.0f);
+                this.model.renderFlower(i, stack, renderTypeBuffer.getBuffer(RenderType.entityCutoutNoCull(flower.getTextureForAge())), light, overlay, 1.0f, 1.0f, 1.0f, 1.0f);
             }
         }
         stack.popPose();
